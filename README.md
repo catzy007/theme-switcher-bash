@@ -1,7 +1,7 @@
 # TealinuxOS Theme Switcher (bash)
 
 ## depedency
-* yad `sudo apt install yad`
+* Yet Another Dialog [yad](https://github.com/v1cont/yad#building-git-version) or just `sudo apt install yad`
 
 ## Installation
 * copy `theme-switcher.desktop` to `/etc/xdg/autostart`
