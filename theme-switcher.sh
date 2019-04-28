@@ -1,6 +1,6 @@
 #!/bin/bash
 file1=~/.config/tea-switcher-mode.cfg
-file2=/usr/share/tealinux/ThemeSwitcher/tea-switcher.sh
+file2=/usr/share/tealinux/ThemeSwitcher/theme-switcher.sh
 if [ ! -f ${file1} ]; then
 	echo 1 > ${file1}
 fi
