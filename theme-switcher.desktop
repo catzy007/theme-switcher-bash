@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Theme-Switcher
+Comment=Switch to Dark or Light Mode
+Exec=yad --notification --image="switcher-light" --command="/usr/share/tealinux/ThemeSwitcher/theme-switcher.sh" --text="Switch to Dark Mode" --no-middle
+Icon=switcher-light
+Path=~/.config
+Terminal=false
+StartupNotify=false
