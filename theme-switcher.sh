@@ -1,9 +1,11 @@
 #!/bin/bash
 file1=~/.config/tea-switcher-mode.cfg
 file2=/usr/share/tealinux/ThemeSwitcher/theme-switcher.sh
+
 if [ ! -f ${file1} ]; then
 	echo 1 > ${file1}
 fi
+
 readarray -t apps < ${file1}
 if [ ${apps[0]} == 0 ]; then
         kill $(pgrep yad)
@@ -22,4 +24,5 @@ else
         xfconf-query -c xsettings -p /Gtk/CursorThemeName -s Tea-Cursor-Light
         echo 0 > ${file1}
 fi
-xfce4-panel -r
+
+#xfce4-panel -r
