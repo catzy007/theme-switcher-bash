@@ -1,6 +1,6 @@
 # TealinuxOS Theme Switcher (bash)
 
-## depedency
+## Dependency
 * Yet Another Dialog [yad](https://github.com/v1cont/yad#building-git-version) or just `sudo apt install yad`
 
 ## Installation
