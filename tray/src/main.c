@@ -2,8 +2,8 @@
 
 char file1[]="~/.config/tea-switcher-mode.cfg";
 char file2[]="/usr/share/tealinux/ThemeSwitcher/theme-switcher.sh";
-char imgDark[]=""; //ganti jika perlu
-char imgLight[]=""; //ganti jika perlu
+char imgDark[]="/usr/share/pixmaps/switcher-dark.png"; //ganti jika perlu
+char imgLight[]="/usr/share/pixmaps/switcher-light.png"; //ganti jika perlu
 
 //pointer ke gtk tray icon
 GtkStatusIcon *tray_icon;
@@ -55,13 +55,13 @@ void tray_icon_on_click(GtkStatusIcon *status_icon, gpointer user_data){
 //change icon to dark mode = icon light
 void switcher_mode_dark(GtkStatusIcon *status_icon, gpointer user_data){
 	gtk_status_icon_set_tooltip_text(tray_icon, "Switch to Light Mode");
-	gtk_status_icon_set_from_file(tray_icon, "./icon/switcher-dark.png");
+	gtk_status_icon_set_from_file(tray_icon, imgDark);
 }
 
 //change icon to light mode = icon dark
 void switcher_mode_light(GtkStatusIcon *status_icon, gpointer user_data){
 	gtk_status_icon_set_tooltip_text(tray_icon, "Switch to Dark Mode");
-	gtk_status_icon_set_from_file(tray_icon, "./icon/switcher-light.png");
+	gtk_status_icon_set_from_file(tray_icon, imgLight);
 }
 
 //create main status icon
@@ -74,10 +74,10 @@ static GtkStatusIcon *create_tray_icon(){
 //set icon based on current status
 	if(getSwitcherMode(file1)){
 		gtk_status_icon_set_tooltip_text(tray_icon, "Switch to Dark Mode");
-		gtk_status_icon_set_from_file(tray_icon, "./icon/switcher-light.png");
+		gtk_status_icon_set_from_file(tray_icon, imgLight);
 	}else{
 		gtk_status_icon_set_tooltip_text(tray_icon, "Switch to Light Mode");
-		gtk_status_icon_set_from_file(tray_icon, "./icon/switcher-dark.png");
+		gtk_status_icon_set_from_file(tray_icon, imgDark);
 	}
 	
 	gtk_status_icon_set_visible(tray_icon, TRUE);
