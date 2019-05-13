@@ -14,10 +14,6 @@ echo "copying $(pwd)/theme-switcher.sh"
 cp "$(pwd)/theme-switcher.sh" "${installpath}/${binpath}"
 chmod +x "${installpath}/${binpath}/theme-switcher.sh"
 
-echo "copying $(pwd)/theme-switcher-tray.sh"
-cp "$(pwd)/theme-switcher-tray.sh" "${installpath}/${binpath}"
-chmod +x "${installpath}/${binpath}/theme-switcher-tray.sh"
-
 echo "copying $(pwd)/icon/switcher-dark.png"
 cp "$(pwd)/icon/switcher-dark.png" "/usr/share/pixmaps/"
 
