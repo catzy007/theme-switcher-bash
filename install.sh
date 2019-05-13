@@ -11,7 +11,7 @@ mkdir "${installpath}"
 mkdir "${installpath}/${binpath}"
 
 echo "copying $(pwd)/theme-switcher.sh"
-cp "$(pwd)/theme-switcher.desktop" "${installpath}/${binpath}"
+cp "$(pwd)/theme-switcher.sh" "${installpath}/${binpath}"
 chmod +x "${installpath}/${binpath}/theme-switcher.sh"
 
 echo "copying $(pwd)/theme-switcher-tray.sh"
