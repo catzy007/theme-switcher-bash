@@ -25,9 +25,10 @@ cp "$(pwd)/theme-switcher.desktop" "/etc/xdg/autostart"
 chmod +x "/etc/xdg/autostart/theme-switcher.desktop"
 
 echo "copying $(pwd)/tray"
-cp -r "$(pwd)/tray" "${installpath}/${binpath}"
-cd "${installpath}/${binpath}/tray"
+cd tray
 cmake .
 make
+cd ..
+cp -r "$(pwd)/tray" "${installpath}/${binpath}"
 
 echo "done!"
